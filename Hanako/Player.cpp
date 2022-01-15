@@ -1,5 +1,8 @@
 #include "Player.h"
 Player::Player() :GameObject("./Sprites/Player/mrmomo.png", sf::Vector2i(0, 0), sf::Vector2f(.2f, .2f)) {
+	for (int i = 0; i < NUMBER_OF_BULLETS; i++) {
+		bullets.push_back(new PlayerBullet());
+	}
 }
 
 void Player::Movement() {
@@ -33,7 +36,25 @@ void Player::Movement() {
 
 }
 
+void Player::Shoot() {
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space)) {
+
+		sf::Time elapsed = fireRate.getElapsedTime();
+
+		if (elapsed.asSeconds() >= TIME_BETWEEN_BULLETS) {
+
+			bullets[currentBulletIndex]->position.x = this->position.x;
+			bullets[currentBulletIndex]->position.y = this->position.y;
+
+			currentBulletIndex == bullets.size() - 1 ? currentBulletIndex = 0 : currentBulletIndex++;
+			fireRate.restart();
+		}
+	}
+
+}
+
 void Player::Update() {
 	GameObject::Update();		//The player will inherit the GameObject Update function, and add its unique Movement function
 	Movement();
+	Shoot();
 }

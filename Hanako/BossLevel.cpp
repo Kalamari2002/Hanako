@@ -6,6 +6,10 @@ BossLevel::BossLevel() {
 void BossLevel::InitializeVariables() {
 
 	sceneObjects.push_back(&player);	//The player address is stored in the sceneObjects vector, which is declared in the Scene parent class
+	for (int i = 0; i < player.bullets.size(); i++) {
+		sceneObjects.push_back(player.bullets[i]);
+	}
+	//sceneObjects.push_back(&playerBullet);
 }
 
 void BossLevel::UpdateScene() {

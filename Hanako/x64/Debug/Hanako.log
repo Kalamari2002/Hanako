@@ -1,38 +1,16 @@
 ﻿  BossLevel.cpp
   Game.cpp
-  GameObject.cpp
-C:\Users\gabri\source\repos\Hanako\Hanako\GameObject.cpp(20,121): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-          and
-          [
-              T=int
-          ]
-C:\Users\gabri\source\repos\Hanako\Hanako\GameObject.cpp(20,66): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-          and
-          [
-              T=int
-          ]
-C:\Users\gabri\source\repos\Hanako\Hanako\GameObject.cpp(24,15): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\gabri\source\repos\Hanako\Hanako\GameObject.cpp(25,15): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   Player.cpp
-C:\Users\gabri\source\repos\Hanako\Hanako\Player.cpp(29,44): warning C4244: '+=': conversion from 'float' to 'T', possible loss of data
+C:\Users\gabri\source\repos\Hanako\Hanako\Player.cpp(34,44): warning C4244: '+=': conversion from 'float' to 'T', possible loss of data
           with
           [
               T=int
           ]
-C:\Users\gabri\source\repos\Hanako\Hanako\Player.cpp(30,44): warning C4244: '+=': conversion from 'float' to 'T', possible loss of data
+C:\Users\gabri\source\repos\Hanako\Hanako\Player.cpp(35,44): warning C4244: '+=': conversion from 'float' to 'T', possible loss of data
           with
           [
               T=int
           ]
-  Scene.cpp
   main.cpp
   Generating Code...
   Hanako.vcxproj -> C:\Users\gabri\source\repos\Hanako\x64\Debug\Hanako.exe
